@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
-
+import {MapModule} from '../common/map/map.module';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
 import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalComponent } from './rental.component';
@@ -34,7 +34,9 @@ const routes: Routes=[
     imports:[CommonModule,
              RouterModule.forChild(routes),
             HttpClientModule,
-            NgPipesModule],
+            NgPipesModule,
+            MapModule],
+            
     providers: [RentalService]
 })
 
